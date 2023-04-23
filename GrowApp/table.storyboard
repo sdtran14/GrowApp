@@ -24,6 +24,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Generate Study Sheet">
                                     <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" red="0.31073515442602556" green="0.96078431610000004" blue="0.18077734168004012" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="enterTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UCk-HD-LOt"/>

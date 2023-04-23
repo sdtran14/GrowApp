@@ -48,7 +48,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        
+       
         tableView.frame = view.bounds
         
     }
@@ -57,6 +57,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
+        tableView.backgroundColor = UIColor.init(red: 175/255, green: 245/255, blue: 203/255, alpha: 255/255)
         let section = sections[section]
         
         if(section.isOpened)
@@ -74,7 +75,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         {
             cell.textLabel?.text = sections[indexPath.section].title
             //color for Topic Cells
-            cell.backgroundColor = UIColor.tintColor
+            cell.backgroundColor = UIColor.lightGray
         } else
         {
             cell.textLabel?.text = sections[indexPath.section].options[indexPath.row-1]
