@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TreeViewController: UIViewController {
 
     @IBOutlet weak var tree1: UIImageView!
     @IBOutlet weak var tree2: UIImageView!

@@ -42,7 +42,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         ]
         for i in 1...selectedAmt
         {
-            let secName : String = "Section " + String(i)
+            let secName : String = "Topic " + String(i)
             sections.append(Section(title: secName, options: ["[add cell]"]))
         }
         view.addSubview(tableView)
@@ -73,10 +73,13 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if indexPath.row == 0
         {
             cell.textLabel?.text = sections[indexPath.section].title
+            //color for Topic Cells
             cell.backgroundColor = UIColor.tintColor
         } else
         {
             cell.textLabel?.text = sections[indexPath.section].options[indexPath.row-1]
+            
+            //color for subTopic Cells
             cell.backgroundColor = UIColor.white
         }
         
@@ -87,7 +90,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func addCell(sect: Int, date: String, score: String)
     {
-        let str =  date + " - Score: " + score
+        let str =  date + " - Mastery: " + score
         
         sections[sect].options.insert(str, at: sections[sect].options.count-1)
         tableView.reloadData()
@@ -115,7 +118,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 
                 ac.sectionNum = indexPath.section
                 ac.delegate = self
-                ac.view.backgroundColor = UIColor.white
+                
                 navigationController?.pushViewController(ac, animated: true)
                 
                 

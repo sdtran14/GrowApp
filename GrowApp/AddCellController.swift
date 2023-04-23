@@ -11,8 +11,11 @@ class AddCellController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("load")
+        
+        self.view.backgroundColor = UIColor.init(red: 175/255, green: 245/255, blue: 203/255, alpha: 255/255)
+        
         let scoreField =  UITextField(frame: CGRect(x: 20, y: 200, width: 300, height: 40))
-        scoreField.placeholder = "Enter Score (0 - 1)"
+        scoreField.placeholder = "Enter Mastery (1 - 3)"
         scoreField.font = UIFont.systemFont(ofSize: 15)
         scoreField.borderStyle = UITextField.BorderStyle.roundedRect
         
@@ -24,7 +27,7 @@ class AddCellController: UIViewController {
         
         let enterButton = UIButton(frame: CGRect(x: 50, y: 500, width: 300, height: 40))
         enterButton.backgroundColor = .black
-        enterButton.setTitle("Add Score", for: .normal)
+        enterButton.setTitle("Add Study Session", for: .normal)
         enterButton.addTarget(self, action:#selector(self.buttonClicked), for: .touchUpInside)
         
         
