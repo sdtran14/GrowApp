@@ -9,7 +9,7 @@ import UIKit
 
 struct Section {
     let title: String
-    let options: [String]
+    var options: [String]
     var isOpened: Bool = false
     
     init(title: String,
@@ -29,14 +29,22 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return tableView
     }()
     
+    var selectedExam: String = "Exam0"
+    var selectedAmt: Int = 0
+    
+    
     private var sections = [Section]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(selectedExam)
+        print(selectedAmt)
         sections = [
-            Section(title: "Section 1", options: [1,2,3,"add"].compactMap({return "Cell \($0)" })),
-            Section(title: "Section 2", options: [1,2,"add"].compactMap({return "Cell \($0)" }))
         ]
+        for i in 1...selectedAmt
+        {
+            let secName : String = "Section " + String(i)
+            sections.append(Section(title: secName, options: ["[add cell]"]))
+        }
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
@@ -65,15 +73,27 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if indexPath.row == 0
         {
             cell.textLabel?.text = sections[indexPath.section].title
+            cell.backgroundColor = UIColor.tintColor
         } else
         {
             cell.textLabel?.text = sections[indexPath.section].options[indexPath.row-1]
+            cell.backgroundColor = UIColor.white
         }
+        
         
         return cell
         
     }
     
+    func addCell(sect: Int, date: String, score: String)
+    {
+        let str =  date + " - Score: " + score
+        
+        sections[sect].options.insert(str, at: sections[sect].options.count-1)
+        tableView.reloadData()
+        
+
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0
@@ -86,6 +106,21 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             print("tapped")
             print(indexPath.row)
             print(sections[indexPath.section].options.count)
+            
+            if(sections[indexPath.section].options.count == indexPath.row)
+            {
+                
+                
+                let ac = AddCellController()
+                
+                ac.sectionNum = indexPath.section
+                ac.delegate = self
+                ac.view.backgroundColor = UIColor.white
+                navigationController?.pushViewController(ac, animated: true)
+                
+                
+            }
+             
         }
     }
         
