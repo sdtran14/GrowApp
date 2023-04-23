@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5386616A29F4A2F600FD8430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5386616929F4A2F600FD8430 /* Main.storyboard */; };
+		5386616C29F4A3FC00FD8430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5386616B29F4A3FC00FD8430 /* Main.storyboard */; };
 		B4F8C49829F3BAA700486F57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F8C49729F3BAA700486F57 /* AppDelegate.swift */; };
 		B4F8C49A29F3BAA700486F57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F8C49929F3BAA700486F57 /* SceneDelegate.swift */; };
 		B4F8C49C29F3BAA700486F57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F8C49B29F3BAA700486F57 /* ViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5386616929F4A2F600FD8430 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "../GrowApp Backup/GrowApp Backup/Main.storyboard"; sourceTree = "<group>"; };
+		5386616B29F4A3FC00FD8430 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "../GrowApp Backup/GrowApp Backup/Main.storyboard"; sourceTree = "<group>"; };
 		B4F8C49429F3BAA700486F57 /* GrowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F8C49729F3BAA700486F57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4F8C49929F3BAA700486F57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 		B4F8C48B29F3BAA700486F57 = {
 			isa = PBXGroup;
 			children = (
+				5386616929F4A2F600FD8430 /* Main.storyboard */,
+				5386616B29F4A3FC00FD8430 /* Main.storyboard */,
 				B4F8C49629F3BAA700486F57 /* GrowApp */,
 				B4F8C4AD29F3BAA900486F57 /* GrowAppTests */,
 				B4F8C4B729F3BAA900486F57 /* GrowAppUITests */,
@@ -238,9 +244,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4F8C4A429F3BAA900486F57 /* LaunchScreen.storyboard in Resources */,
+				5386616C29F4A3FC00FD8430 /* Main.storyboard in Resources */,
 				B4F8C4A129F3BAA900486F57 /* Assets.xcassets in Resources */,
 				B4F8C49F29F3BAA700486F57 /* Main.storyboard in Resources */,
-				B4F8C4C829F3D5D000486F57 /* table.storyboard in Resources */,
+				5386616A29F4A2F600FD8430 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
