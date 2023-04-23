@@ -37,7 +37,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="amtSectionsField" destination="0co-GX-wJs" id="niy-7U-lnx"/>
+                        <outlet property="amtSectionsField" destination="0co-GX-wJs" id="vwx-7b-oMH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
