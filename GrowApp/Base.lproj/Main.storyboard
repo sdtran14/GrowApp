@@ -132,6 +132,9 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.14759583928125106" green="0.36048612828107229" blue="0.21702413789209335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="vF3-Yz-O9S" kind="show" id="Y3x-5h-DQT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spx-EW-z6d">
                                 <rect key="frame" x="317" y="478" width="27" height="28"/>
@@ -335,12 +338,197 @@
             </objects>
             <point key="canvasLocation" x="-576" y="-206"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="LGF-Eh-7ZI">
+            <objects>
+                <viewController storyboardIdentifier="forestBoard" id="vF3-Yz-O9S" customClass="ViewController" customModule="storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="afz-AM-nN8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtK-bi-lvA">
+                                <rect key="frame" x="145" y="663" width="102" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Plant">
+                                    <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonPress:" destination="vF3-Yz-O9S" eventType="touchUpInside" id="u3H-UB-wnx"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tree" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Yjx-AZ-5lw">
+                                <rect key="frame" x="16" y="116" width="124" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tree" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VNj-7y-nfQ">
+                                <rect key="frame" x="253" y="116" width="124" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoNoWords" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-g5-qHo">
+                                <rect key="frame" x="134" y="248" width="124" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tree" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sAM-aM-5vi">
+                                <rect key="frame" x="16" y="380" width="124" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tree" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ucM-iD-haA">
+                                <rect key="frame" x="253" y="380" width="124" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaz-AQ-e3s">
+                                <rect key="frame" x="118" y="767" width="158" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Previous Gardens">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="vbn-DP-acx" kind="show" id="fGb-fQ-4im"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5j-j0-Wj0">
+                                <rect key="frame" x="253" y="60" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dap-4Z-CjE"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="76D-lm-Wht"/>
+                    <connections>
+                        <outlet property="counterLabel" destination="f5j-j0-Wj0" id="4lz-bc-KNJ"/>
+                        <outlet property="tree1" destination="Yjx-AZ-5lw" id="4Ij-su-X63"/>
+                        <outlet property="tree2" destination="VNj-7y-nfQ" id="aat-QT-s6Q"/>
+                        <outlet property="tree3" destination="dbc-g5-qHo" id="U4x-my-xg7"/>
+                        <outlet property="tree4" destination="sAM-aM-5vi" id="58M-3R-jz8"/>
+                        <outlet property="tree5" destination="ucM-iD-haA" id="ktO-kN-RWL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="68S-v1-7aT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="-64"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ItL-Pa-gAZ">
+            <objects>
+                <viewController id="vbn-DP-acx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KCy-jU-tYw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tree" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JPw-Hp-Xes">
+                                <rect key="frame" x="-22" y="222.66666666666663" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tree" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="a4b-Zh-aCy">
+                                <rect key="frame" x="-22" y="454.66666666666669" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nF-O9-AgW">
+                                <rect key="frame" x="226" y="501" width="94" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Garden 2"/>
+                                <connections>
+                                    <segue destination="Qyn-KB-A21" kind="show" id="asx-Xv-dEd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyt-Md-r4D">
+                                <rect key="frame" x="226" y="269" width="92" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Garden 1"/>
+                                <connections>
+                                    <segue destination="Opw-QF-Enu" kind="show" id="23k-Za-3RP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qyo-U9-J62"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="668-N9-i3m"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6BA-sT-22m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2729" y="-51"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="chb-pc-x5r">
+            <objects>
+                <viewController id="Opw-QF-Enu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L4e-FD-cuz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoNoWords" highlightedImage="logoNoWords" translatesAutoresizingMaskIntoConstraints="NO" id="01U-2U-drb">
+                                <rect key="frame" x="52" y="186" width="288" height="346"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Snl-yu-v7b"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PBc-dL-Pqy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gIu-ph-een" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3514" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RTG-5w-mC2">
+            <objects>
+                <viewController id="Qyn-KB-A21" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MKE-f3-dSn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tree.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8jn-2T-Wgk">
+                                <rect key="frame" x="26" y="93" width="340" height="337"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0G2-0q-a3m"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oWJ-KQ-HIa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XSb-2o-MH2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3514" y="217"/>
+        </scene>
     </scenes>
     <resources>
         <image name="logo" width="2048" height="2048"/>
-        <image name="logoNoWords" width="2048" height="2048"/>
+        <image name="logoNoWords" width="682.66668701171875" height="682.66668701171875"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="tree" catalog="system" width="128" height="118"/>
+        <image name="tree.circle" catalog="system" width="128" height="123"/>
         <image name="xmark.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
